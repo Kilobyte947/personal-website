@@ -1,0 +1,46 @@
+---
+title: "Understanding the Raft Consensus Algorithm"
+date: "2024-12-10"
+description: "A walkthrough of how Raft achieves fault-tolerant consensus in distributed systems, with diagrams and intuition behind each phase."
+tags: ["Distributed Systems", "Go", "CS"]
+---
+
+# Understanding the Raft Consensus Algorithm
+
+Consensus algorithms are the backbone of distributed systems. They let a cluster of machines agree on a single value even when some nodes crash or messages get dropped.
+
+Raft was designed to be *understandable* — unlike Paxos, which is notoriously difficult to reason about. Here's the core insight that makes Raft tractable.
+
+## The Three Roles
+
+Every Raft node is in one of three states at any time:
+
+- **Follower** — passive, just receives log entries
+- **Candidate** — campaigning for leadership
+- **Leader** — the one source of truth; handles all writes
+
+## Leader Election
+
+If a follower doesn't hear from a leader within a random election timeout (150–300ms), it becomes a Candidate and starts an election. It votes for itself and broadcasts a `RequestVote` RPC.
+
+A node grants its vote if:
+1. It hasn't voted yet this term
+2. The candidate's log is at least as up-to-date as its own
+
+Once a candidate wins a majority, it becomes leader.
+
+## Log Replication
+
+The leader accepts client requests and appends them to its log. It then replicates the entry to followers via `AppendEntries` RPCs. Once a majority have acknowledged the entry, it's *committed* and applied to the state machine.
+
+This is the key safety property: a committed entry will never be overwritten.
+
+## Why Raft is Easier to Understand
+
+Raft decomposes consensus into three relatively independent subproblems:
+
+- **Leader election**
+- **Log replication**
+- **Safety**
+
+Each has a clear invariant you can reason about independently. If you want to implement it yourself, the [extended Raft paper](https://raft.github.io/raft.pdf) is the place to start — and then MIT 6.5840 is where you build it.

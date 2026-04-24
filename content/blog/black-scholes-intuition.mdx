@@ -1,0 +1,42 @@
+---
+title: "Black-Scholes: The Intuition Behind the Formula"
+date: "2025-02-20"
+description: "Rather than deriving Black-Scholes from scratch, let's build intuition for what it's actually computing and where its assumptions break down."
+tags: ["Quant Finance", "Math", "Options"]
+---
+
+# Black-Scholes: The Intuition Behind the Formula
+
+The Black-Scholes formula appears in every quant finance textbook, but its derivation via stochastic differential equations can obscure what it's really doing.
+
+Here's a cleaner way to think about it.
+
+## The Core Idea: Dynamic Hedging
+
+Black-Scholes doesn't value an option in isolation — it values it relative to a *continuously rebalanced hedge*. The idea is:
+
+> If you can trade the underlying stock continuously, you can construct a portfolio that exactly replicates the option's payoff. The option's fair value is the cost of that replicating portfolio.
+
+This is the **no-arbitrage** principle at work.
+
+## The Five Inputs
+
+The formula takes five inputs:
+- `S` — current stock price
+- `K` — strike price
+- `T` — time to expiry (in years)
+- `r` — risk-free rate
+- `σ` — volatility (annualized standard deviation of log returns)
+
+The output is the call price `C`.
+
+## Where It Breaks Down
+
+The model assumes:
+- **Constant volatility** — in practice, vol is a *smile*, not a flat surface
+- **Continuous trading** — gaps and jumps happen
+- **Log-normal returns** — fat tails are real
+
+That's why practitioners use Black-Scholes not as a pricing model but as a *quoting convention* — expressing option prices in units of implied volatility.
+
+When implied vol differs from realized vol, you have an edge. That's where the interesting work begins.
