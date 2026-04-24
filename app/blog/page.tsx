@@ -10,7 +10,7 @@ export default function BlogPage() {
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-16">
-      <p className="text-xs font-semibold uppercase tracking-widest text-violet-500 mb-3">
+      <p className="text-xs font-semibold uppercase tracking-widest text-blue-500 mb-3">
         Writing
       </p>
       <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-2">Blog</h1>

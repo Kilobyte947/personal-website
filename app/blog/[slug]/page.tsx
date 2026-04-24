@@ -27,7 +27,7 @@ export default async function PostPage({ params }: Props) {
     <div className="max-w-3xl mx-auto px-6 py-16">
       <Link
         href="/blog"
-        className="inline-flex items-center gap-1.5 text-sm text-indigo-500 hover:text-indigo-700 transition-colors mb-10"
+        className="inline-flex items-center gap-1.5 text-sm text-blue-500 hover:text-blue-700 transition-colors mb-10"
       >
         <ArrowLeft size={14} />
         Back to Blog

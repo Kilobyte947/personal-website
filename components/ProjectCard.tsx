@@ -3,8 +3,8 @@ import type { Project } from "@/data/projects";
 import { tagColor } from "@/lib/tagColor";
 
 const ACCENTS = [
-  "border-t-indigo-400",
-  "border-t-violet-400",
+  "border-t-blue-400",
+  "border-t-blue-600",
   "border-t-emerald-400",
   "border-t-sky-400",
 ];
@@ -30,7 +30,7 @@ export default function ProjectCard({
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-indigo-600 transition-colors"
+              className="text-gray-400 hover:text-blue-600 transition-colors"
             >
               <GitBranch size={16} />
             </a>
@@ -40,7 +40,7 @@ export default function ProjectCard({
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-indigo-600 transition-colors"
+              className="text-gray-400 hover:text-blue-600 transition-colors"
             >
               <ExternalLink size={16} />
             </a>

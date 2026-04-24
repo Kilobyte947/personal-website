@@ -7,8 +7,8 @@ export const metadata = {
 };
 
 const SKILL_CATEGORY_COLORS: Record<string, string> = {
-  Languages: "text-indigo-600",
-  "AI / ML": "text-violet-600",
+  Languages: "text-blue-600",
+  "AI / ML": "text-blue-600",
   "Quant / Finance": "text-emerald-600",
   Infrastructure: "text-sky-600",
 };
@@ -28,7 +28,7 @@ export default function ResumePage() {
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 text-sm text-gray-600 rounded-lg hover:border-indigo-300 hover:text-indigo-600 hover:bg-indigo-50 transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 text-sm text-gray-600 rounded-lg hover:border-blue-300 hover:text-blue-600 hover:bg-blue-50 transition-colors"
         >
           <Download size={14} />
           PDF
@@ -37,18 +37,18 @@ export default function ResumePage() {
 
       {/* Experience */}
       <section className="mb-14">
-        <h2 className="text-xs font-semibold uppercase tracking-widest text-indigo-500 mb-6">
+        <h2 className="text-xs font-semibold uppercase tracking-widest text-blue-500 mb-6">
           Experience
         </h2>
         <div className="space-y-8">
           {experience.map((item) => (
             <div
               key={item.role + item.company}
-              className="grid grid-cols-[1fr_auto] gap-x-6 pl-4 border-l-2 border-indigo-100 hover:border-indigo-400 transition-colors"
+              className="grid grid-cols-[1fr_auto] gap-x-6 pl-4 border-l-2 border-blue-100 hover:border-blue-400 transition-colors"
             >
               <div>
                 <h3 className="font-semibold text-gray-900">{item.role}</h3>
-                <p className="text-sm text-indigo-600 mb-2">{item.company}</p>
+                <p className="text-sm text-blue-600 mb-2">{item.company}</p>
                 <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
                 <div className="flex flex-wrap gap-2 mt-3">
                   {item.tags.map((tag) => (
@@ -69,18 +69,18 @@ export default function ResumePage() {
 
       {/* Education */}
       <section className="mb-14">
-        <h2 className="text-xs font-semibold uppercase tracking-widest text-violet-500 mb-6">
+        <h2 className="text-xs font-semibold uppercase tracking-widest text-blue-500 mb-6">
           Education
         </h2>
         <div className="space-y-6">
           {education.map((item) => (
             <div
               key={item.degree}
-              className="grid grid-cols-[1fr_auto] gap-x-6 pl-4 border-l-2 border-violet-100 hover:border-violet-400 transition-colors"
+              className="grid grid-cols-[1fr_auto] gap-x-6 pl-4 border-l-2 border-blue-100 hover:border-blue-400 transition-colors"
             >
               <div>
                 <h3 className="font-semibold text-gray-900">{item.degree}</h3>
-                <p className="text-sm text-violet-600 mb-2">{item.institution}</p>
+                <p className="text-sm text-blue-600 mb-2">{item.institution}</p>
                 <p className="text-sm text-gray-600 leading-relaxed">{item.details}</p>
               </div>
               <span className="text-xs text-gray-400 whitespace-nowrap mt-0.5">{item.period}</span>

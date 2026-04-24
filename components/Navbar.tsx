@@ -18,7 +18,7 @@ export default function Navbar() {
       <nav className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
         <Link
           href="/"
-          className="font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent hover:from-indigo-500 hover:to-violet-500 transition-all"
+          className="font-semibold bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent hover:from-blue-400 hover:to-blue-600 transition-all"
         >
           Nick Wang
         </Link>
@@ -29,13 +29,13 @@ export default function Navbar() {
                 href={href}
                 className={`text-sm transition-colors relative ${
                   pathname === href
-                    ? "text-indigo-600 font-medium"
+                    ? "text-blue-600 font-medium"
                     : "text-gray-500 hover:text-gray-900"
                 }`}
               >
                 {label}
                 {pathname === href && (
-                  <span className="absolute -bottom-[18px] left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-500 to-violet-500 rounded-full" />
+                  <span className="absolute -bottom-[18px] left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full" />
                 )}
               </Link>
             </li>
