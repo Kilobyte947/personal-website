@@ -3,69 +3,78 @@ import { Mail, ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-24">
-      {/* Hero */}
-      <section className="mb-20">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 mb-4">
-          Hi, I&apos;m Nick Wang.
-        </h1>
-        <p className="text-xl text-gray-500 mb-8 leading-relaxed">
-          CS student at [Your University], interested in{" "}
-          <span className="text-gray-900 font-medium">software engineering</span>,{" "}
-          <span className="text-gray-900 font-medium">AI</span>, and{" "}
-          <span className="text-gray-900 font-medium">quantitative finance</span>.
-        </p>
+    <div>
+      {/* Hero — subtle gradient wash */}
+      <div className="relative overflow-hidden">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-50 via-violet-50/40 to-transparent"
+        />
+        <section className="relative max-w-3xl mx-auto px-6 pt-24 pb-20">
+          <p className="text-xs font-semibold uppercase tracking-widest text-indigo-500 mb-4">
+            Available for internships · 2025
+          </p>
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 mb-5">
+            Hi, I&apos;m Nick Wang.
+          </h1>
+          <p className="text-xl text-gray-500 mb-8 leading-relaxed max-w-xl">
+            CS student at [Your University], interested in{" "}
+            <span className="text-indigo-600 font-medium">software engineering</span>,{" "}
+            <span className="text-violet-600 font-medium">AI</span>, and{" "}
+            <span className="text-emerald-600 font-medium">quantitative finance</span>.
+          </p>
 
-        {/* Social links */}
-        <div className="flex items-center gap-4 mb-10">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            GitHub
-          </a>
-          <span className="text-gray-200">·</span>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            LinkedIn
-          </a>
-          <span className="text-gray-200">·</span>
-          <a
-            href="mailto:nickwang947@gmail.com"
-            className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            <Mail size={14} />
-            Email
-          </a>
-        </div>
+          {/* Social links */}
+          <div className="flex items-center gap-4 mb-10">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-gray-500 hover:text-indigo-600 transition-colors"
+            >
+              GitHub
+            </a>
+            <span className="text-gray-200">·</span>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-gray-500 hover:text-indigo-600 transition-colors"
+            >
+              LinkedIn
+            </a>
+            <span className="text-gray-200">·</span>
+            <a
+              href="mailto:nickwang947@gmail.com"
+              className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-indigo-600 transition-colors"
+            >
+              <Mail size={14} />
+              Email
+            </a>
+          </div>
 
-        {/* CTAs */}
-        <div className="flex items-center gap-4">
-          <Link
-            href="/projects"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors"
-          >
-            View Projects
-            <ArrowRight size={14} />
-          </Link>
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-200 text-gray-700 text-sm font-medium rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-colors"
-          >
-            Read Blog
-          </Link>
-        </div>
-      </section>
+          {/* CTAs */}
+          <div className="flex items-center gap-3">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-sm shadow-indigo-200"
+            >
+              View Projects
+              <ArrowRight size={14} />
+            </Link>
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-indigo-200 text-indigo-700 bg-white text-sm font-medium rounded-lg hover:bg-indigo-50 transition-colors"
+            >
+              Read Blog
+            </Link>
+          </div>
+        </section>
+      </div>
 
       {/* About */}
-      <section>
-        <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-6">
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <h2 className="text-xs font-semibold uppercase tracking-widest text-indigo-500 mb-6">
           About
         </h2>
         <div className="space-y-4 text-gray-600 leading-relaxed">

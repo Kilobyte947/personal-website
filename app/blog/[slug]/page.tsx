@@ -3,6 +3,7 @@ import { getAllPosts, getPost } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { tagColor } from "@/lib/tagColor";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -26,14 +27,14 @@ export default async function PostPage({ params }: Props) {
     <div className="max-w-3xl mx-auto px-6 py-16">
       <Link
         href="/blog"
-        className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-700 transition-colors mb-10"
+        className="inline-flex items-center gap-1.5 text-sm text-indigo-500 hover:text-indigo-700 transition-colors mb-10"
       >
         <ArrowLeft size={14} />
         Back to Blog
       </Link>
 
-      <header className="mb-12">
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-3">
+      <header className="mb-12 pb-8 border-b border-gray-100">
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
           {post.meta.title}
         </h1>
         <div className="flex items-center gap-4">
@@ -41,7 +42,10 @@ export default async function PostPage({ params }: Props) {
           {post.meta.tags && post.meta.tags.length > 0 && (
             <div className="flex gap-2">
               {post.meta.tags.map((tag) => (
-                <span key={tag} className="text-xs px-2 py-0.5 bg-indigo-50 text-indigo-700 rounded-md font-medium">
+                <span
+                  key={tag}
+                  className={`text-xs px-2 py-0.5 rounded-md font-medium ${tagColor(tag)}`}
+                >
                   {tag}
                 </span>
               ))}
