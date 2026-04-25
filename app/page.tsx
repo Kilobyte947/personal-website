@@ -18,16 +18,21 @@ export default function Home() {
             Hi, I&apos;m Nick Wang.
           </h1>
           <p className="text-xl text-gray-500 mb-8 leading-relaxed max-w-xl">
-            CS student at [Your University], interested in{" "}
-            <span className="text-blue-600 font-medium">software engineering</span>,{" "}
-            <span className="text-blue-600 font-medium">AI</span>, and{" "}
-            <span className="text-emerald-600 font-medium">quantitative finance</span>.
+            Maths student at University of Oxford, interested in{" "}
+            <span className="text-blue-600 font-medium">
+              software engineering
+            </span>
+            , <span className="text-blue-600 font-medium">AI</span>, and{" "}
+            <span className="text-emerald-600 font-medium">
+              quantitative finance
+            </span>
+            .
           </p>
 
           {/* Social links */}
           <div className="flex items-center gap-4 mb-10">
             <a
-              href="https://github.com"
+              href="https://github.com/Kilobyte947"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-gray-500 hover:text-blue-600 transition-colors"
@@ -36,7 +41,7 @@ export default function Home() {
             </a>
             <span className="text-gray-200">·</span>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/nick-wang-672822229/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-gray-500 hover:text-blue-600 transition-colors"
@@ -79,19 +84,22 @@ export default function Home() {
         </h2>
         <div className="space-y-4 text-gray-600 leading-relaxed">
           <p>
-            I&apos;m a third-year CS student with a focus on systems, machine learning, and their
-            applications to finance. I enjoy building things that are fast, correct, and
-            well-reasoned — whether that&apos;s a distributed system, a trading strategy, or an
-            AI-powered tool.
+            I&apos;m a Mathematics and Statistics student at the University of
+            Oxford interested in software engineering, machine learning, and
+            quantitative finance. I enjoy building systems and models that turn
+            theory into practical solutions, with a focus on performance,
+            scalability, and data-driven thinking.
           </p>
           <p>
-            Outside of classes, I do research in the university ML lab on transformer-based
-            forecasting for financial time series. I&apos;m actively looking for internships in
-            software engineering, quantitative research, or AI roles.
+            My work spans full-stack development, applied machine learning, and
+            quantitative research, and I&apos;m particularly interested in how
+            these areas intersect. I like approaching problems from first
+            principles and care about understanding how things work under the
+            hood—not just using them.
           </p>
           <p>
-            When I&apos;m not at a computer, I enjoy chess, distance running, and reading about
-            mathematics.
+            When I&apos;m not at a computer, I enjoy chess, poker, badminton and
+            guitar.
           </p>
         </div>
       </section>
